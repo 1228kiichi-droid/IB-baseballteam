@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Hiragino Kaku Gothic Pro', 'Meiryo', sans-serif;
+    background: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  .slide {
+    width: 960px;
+    height: 540px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .header {
+    background: linear-gradient(135deg, #1a3a5c, #2d6a4f);
+    color: white;
+    padding: 24px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header h1 {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  .header .company {
+    font-size: 13px;
+    opacity: 0.85;
+    text-align: right;
+  }
+  .body {
+    display: flex;
+    flex: 1;
+    padding: 28px 40px;
+    gap: 32px;
+  }
+  .left {
+    flex: 1.4;
+  }
+  .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .section-title {
+    font-size: 13px;
+    font-weight: bold;
+    color: #1a3a5c;
+    border-bottom: 2px solid #1a3a5c;
+    padding-bottom: 4px;
+    margin-bottom: 14px;
+    letter-spacing: 1px;
+  }
+  .service-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+  .icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #1a3a5c, #2d6a4f);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+  .service-text h3 {
+    font-size: 13px;
+    font-weight: bold;
+    color: #1a3a5c;
+    margin-bottom: 2px;
+  }
+  .service-text p {
+    font-size: 11px;
+    color: #555;
+    line-height: 1.5;
+  }
+  .contract-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 16px;
+  }
+  .contract-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .contract-row:last-child {
+    border-bottom: none;
+  }
+  .contract-label {
+    font-size: 11px;
+    color: #666;
+    font-weight: bold;
+  }
+  .contract-value {
+    font-size: 12px;
+    color: #1a3a5c;
+    font-weight: bold;
+    text-align: right;
+  }
+  .price {
+    font-size: 20px;
+    color: #2d6a4f;
+  }
+  .footer {
+    background: #1a3a5c;
+    color: white;
+    padding: 10px 40px;
+    font-size: 11px;
+    text-align: center;
+    opacity: 0.9;
+    letter-spacing: 1px;
+  }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="header">
+    <h1>学生野球支援事業<br>能力測定プログラムのご案内</h1>
+    <div class="company">IB Baseball Team<br>担当：中植・黒田</div>
+  </div>
+
+  <div class="body">
+    <div class="left">
+      <div class="section-title">サービス内容</div>
+
+      <div class="service-item">
+        <div class="icon">🏋️</div>
+        <div class="service-text">
+          <h3>トレーニングメニュー作成・指導</h3>
+          <p>選手個々の特性に合わせたオーダーメイドのトレーニングプログラムを作成。データに基づいた科学的指導でパフォーマンスを最大化します。</p>
+        </div>
+      </div>
+
+      <div class="service-item">
+        <div class="icon">⚾</div>
+        <div class="service-text">
+          <h3>ラプソードを用いた投球動作指導</h3>
+          <p>最新の投球解析機器「Rapsodo」を活用し、球速・回転数・変化量などのデータから投球フォームの改善・強化を行います。</p>
+        </div>
+      </div>
+
+      <div class="service-item">
+        <div class="icon">🏃</div>
+        <div class="service-text">
+          <h3>フィールドトレーニング指導</h3>
+          <p>実践的なフィールドでのトレーニング指導を通じて、選手の総合的な競技力向上をサポートします。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="right">
+      <div>
+        <div class="section-title">ご契約内容</div>
+        <div class="contract-box">
+          <div class="contract-row">
+            <span class="contract-label">月額料金</span>
+            <span class="contract-value"><span class="price">¥30,000</span><br><small style="font-size:10px;color:#888">（税抜き）</small></span>
+          </div>
+          <div class="contract-row">
+            <span class="contract-label">契約期間</span>
+            <span class="contract-value">1ヶ月（都度更新）</span>
+          </div>
+          <div class="contract-row">
+            <span class="contract-label">お支払い</span>
+            <span class="contract-value">現金支払い</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contract-box" style="background: linear-gradient(135deg, #e8f5e9, #e3f2fd); border-color: #2d6a4f;">
+        <p style="font-size: 12px; color: #1a3a5c; font-weight: bold; margin-bottom: 6px;">📊 Rapsodoとは？</p>
+        <p style="font-size: 11px; color: #444; line-height: 1.6;">プロ野球チームも採用する最先端の投球解析機器。球速・回転数・変化量などをリアルタイムで計測し、データドリブンな指導を実現します。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    データに基づいた科学的トレーニングで、選手の可能性を最大限に引き出します
+  </div>
+</div>
+</body>
+</html>
