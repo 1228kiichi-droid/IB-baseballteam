@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Hiragino Kaku Gothic Pro', 'Meiryo', sans-serif;
+    background: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  .slide {
+    width: 960px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .header {
+    background: linear-gradient(135deg, #1a3a5c, #2d6a4f);
+    color: white;
+    padding: 24px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header h1 {
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  .header .date-badge {
+    background: rgba(255,255,255,0.2);
+    border-radius: 8px;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .header .date-badge small {
+    display: block;
+    font-size: 12px;
+    opacity: 0.85;
+    margin-bottom: 4px;
+  }
+  .body {
+    display: flex;
+    flex: 1;
+    padding: 28px 40px;
+    gap: 32px;
+  }
+  .left {
+    flex: 1.6;
+  }
+  .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .section-title {
+    font-size: 15px;
+    font-weight: bold;
+    color: #1a3a5c;
+    border-bottom: 2px solid #1a3a5c;
+    padding-bottom: 4px;
+    margin-bottom: 16px;
+    letter-spacing: 1px;
+  }
+  .timeline {
+    position: relative;
+    padding-left: 20px;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: linear-gradient(to bottom, #1a3a5c, #2d6a4f);
+  }
+  .timeline-item {
+    position: relative;
+    margin-bottom: 16px;
+    padding-left: 20px;
+  }
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -14px;
+    top: 6px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #1a3a5c;
+  }
+  .timeline-time {
+    font-size: 13px;
+    font-weight: bold;
+    color: #2d6a4f;
+    margin-bottom: 2px;
+  }
+  .timeline-content {
+    font-size: 15px;
+    font-weight: bold;
+    color: #1a3a5c;
+  }
+  .timeline-desc {
+    font-size: 12px;
+    color: #666;
+    margin-top: 2px;
+  }
+  .contract-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 16px;
+  }
+  .contract-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .contract-row:last-child {
+    border-bottom: none;
+  }
+  .contract-label {
+    font-size: 13px;
+    color: #666;
+    font-weight: bold;
+  }
+  .contract-value {
+    font-size: 14px;
+    color: #1a3a5c;
+    font-weight: bold;
+    text-align: right;
+  }
+  .price {
+    font-size: 24px;
+    color: #2d6a4f;
+  }
+  .highlight-box {
+    background: linear-gradient(135deg, #e8f5e9, #e3f2fd);
+    border: 1px solid #2d6a4f;
+    border-radius: 8px;
+    padding: 16px;
+  }
+  .highlight-box p {
+    font-size: 13px;
+    color: #1a3a5c;
+    line-height: 1.7;
+  }
+  .footer {
+    background: #1a3a5c;
+    color: white;
+    padding: 12px 40px;
+    font-size: 13px;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="header">
+    <h1>スポット利用<br>プログラムのご案内</h1>
+    <div class="date-badge">
+      <small>実施日</small>
+      2025年7月24日（金）<br>
+      <span style="font-size:14px">13:00 〜 18:00</span>
+    </div>
+  </div>
+
+  <div class="body">
+    <div class="left">
+      <div class="section-title">当日スケジュール</div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-time">13:00 〜 14:00</div>
+          <div class="timeline-content">🍚 トレーニング・栄養基礎講座（座学）</div>
+          <div class="timeline-desc">パフォーマンスを支える栄養の基礎知識を学ぶ講座</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">14:00 〜 14:30</div>
+          <div class="timeline-content">🏃 ウォームアップ指導</div>
+          <div class="timeline-desc">測定前の適切なウォームアップ方法を指導</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">14:30 〜 16:00</div>
+          <div class="timeline-content">📊 パフォーマンス測定</div>
+          <div class="timeline-desc">身体能力・運動パフォーマンスの総合測定</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">16:00 〜 18:00</div>
+          <div class="timeline-content">⚾ ラプソード測定・ピッチング指導</div>
+          <div class="timeline-desc">Rapsodoによる投球データ計測と個別フォーム指導</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="right">
+      <div>
+        <div class="section-title">料金・お支払い</div>
+        <div class="contract-box">
+          <div class="contract-row">
+            <span class="contract-label">料金</span>
+            <span class="contract-value">
+              <span class="price">¥20,000</span><br>
+              <small style="font-size:11px;color:#888">（税抜き）</small>
+            </span>
+          </div>
+          <div class="contract-row">
+            <span class="contract-label">お支払い</span>
+            <span class="contract-value">現金支払い<br><small style="font-size:11px;color:#888">当日受領</small></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <p style="font-weight:bold; margin-bottom:8px;">📋 当日の持ち物</p>
+        <p>
+          ・ユニフォーム・練習着<br>
+          ・グローブ・スパイク<br>
+          ・飲み物・タオル<br>
+          ・筆記用具（講座用）
+        </p>
+      </div>
+
+      <div class="contract-box" style="background: linear-gradient(135deg, #fff3e0, #fce4ec); border-color: #e65100;">
+        <p style="font-size: 13px; color: #e65100; font-weight: bold; margin-bottom: 6px;">⚡ Rapsodoとは？</p>
+        <p style="font-size: 12px; color: #444; line-height: 1.6;">プロ野球チームも採用する最先端の投球解析機器。球速・回転数・変化量をリアルタイムで計測します。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    IB Baseball Team｜担当：中植・黒田
+  </div>
+</div>
+</body>
+</html>
